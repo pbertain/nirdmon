@@ -1,0 +1,49 @@
+<!-- Version: 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='images/nird-club-monitorer-logo.png') }}" alt="Nird Club Monitorer Logo">
+    </div>
+
+    {% include 'header.html' %}
+
+    <div class="container">
+        <h1>Monitoring Results</h1>
+        <p>Here are the current monitoring statuses of the domains:</p>
+
+        <table class="monitor-table">
+            <thead>
+                <tr>
+                    <th>Domain</th>
+                    <th>Status</th>
+                    <th>Last Checked</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for domain in domains %}
+                <tr>
+                    <td>{{ domain['domain'] }}</td>
+                    <td class="{{ 'status-green' if domain['status'] == 'OK' else 'status-yellow' if domain['status'] == 'WARN' else 'status-red' }}">
+                        {{ domain['status'] }}
+                    </td>
+                    <td>{{ domain['last_checked'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <br>
+        <a href="{{ url_for('index') }}" class="back-btn">Back to Dashboard</a>
+    </div>
+
+</body>
+</html>
+

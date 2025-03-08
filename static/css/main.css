@@ -1,0 +1,161 @@
+/* General Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e7f1; /* Muted Blue-Grey */
+    color: #333;
+    margin: 0;
+    padding-left: 30px; /* Left buffer added */
+    padding-right: 30px; /* Right buffer for symmetry */
+}
+
+/* Header Styling */
+.main-header {
+    background-color: #2a3d66; /* Muted Deep Blue */
+    padding: 15px 0;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+
+/* Logo Size Fix */
+.logo {
+    height: 45px; /* Reduced logo size */
+    width: auto;   /* Maintain aspect ratio */
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFD700; /* Gold for contrast */
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Page Containers */
+.container {
+    max-width: 1100px;
+    margin: 20px auto; /* Centers content */
+    padding: 20px; /* Internal spacing */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Monitor Table */
+.monitor-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 15px; /* Buffer space */
+    padding-right: 15px;
+}
+
+.monitor-table {
+    width: 85%;
+    border-collapse: collapse;
+    background-color: #f9f9ff; /* Light Blueish */
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centers table */
+}
+
+.monitor-table th, .monitor-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.monitor-table th {
+    background-color: #444;
+    color: white;
+}
+
+/* Status Indicators */
+.status-ok {
+    color: #3cba54; /* Green */
+    font-weight: bold;
+}
+
+.status-warn {
+    color: #f4c542; /* Yellow */
+    font-weight: bold;
+}
+
+.status-error {
+    color: #db4437; /* Red */
+    font-weight: bold;
+}
+
+/* Forms */
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #FFD700;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #daa520;
+}
+
+/* Chart Styling */
+.chart-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.chart-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #2a3d66;
+    color: white;
+    font-size: 14px;
+}
+

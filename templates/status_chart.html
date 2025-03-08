@@ -1,0 +1,24 @@
+<!-- Version: 2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirdmon - Status Chart</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+    {% include 'header.html' %} <!-- Include the navigation header -->
+
+    <div class="container">
+        <h1>Status Chart</h1>
+        <p>This chart provides an overview of the monitoring status of all tracked domains.</p>
+        <div class="chart-container">
+            <img src="{{ chart_url }}" alt="Status Chart">
+        </div>
+    </div>
+
+</body>
+</html>
+

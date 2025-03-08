@@ -1,0 +1,7 @@
+# Version: 1
+# Configuration for Nirdmon Monitoring System
+
+logging:
+  level: "INFO"
+  file: "/var/log/nirdmon/app.log"
+

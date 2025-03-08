@@ -1,0 +1,24 @@
+# Version: 3
+# Systemd service file for Nird Club Monitorer
+# To enable and start the service, run:
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable nird-monitor.service
+#   sudo systemctl start nird-monitor.service
+# To check the status:
+#   sudo systemctl status nird-monitor.service
+
+[Unit]
+Description=Nird Club Monitorer Web Service
+After=network.target
+
+[Service]
+User=nirdmon_user
+Group=nirdmon_user
+WorkingDirectory=/var/bertain-cdn/nirdmon
+ExecStart=/var/bertain-cdn/nirdmon/venv/bin/python /var/bertain-cdn/nirdmon/main.py
+Restart=always
+EnvironmentFile=/var/bertain-cdn/nirdmon/config/.env
+
+[Install]
+WantedBy=multi-user.target
+

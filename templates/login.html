@@ -1,0 +1,30 @@
+<!-- Version: 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nird Club Monitorer - Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='images/nird-club-monitorer-logo.png') }}" alt="Nird Club Monitorer Logo">
+    </div>
+
+    <div class="container">
+        <h1>Login to Nird Club Monitorer</h1>
+
+        <form action="{{ url_for('login') }}" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <p>If you don't have an account, contact an admin.</p>
+    </div>
+
+</body>
+</html>
+

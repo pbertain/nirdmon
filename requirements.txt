@@ -1,0 +1,11 @@
+dnspython
+Flask
+Flask-Bcrypt
+Flask-Login
+matplotlib
+mysql-connector-python
+PyMySQL
+pyOpenSSL
+python-dotenv
+PyYAML
+requests
